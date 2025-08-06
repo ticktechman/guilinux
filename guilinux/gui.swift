@@ -13,6 +13,8 @@ struct VirtualMachineContainer: NSViewRepresentable {
 
   func makeNSView(context: Context) -> VZVirtualMachineView {
     let vmView = VZVirtualMachineView()
+//    vmView.automaticallyReconfiguresDisplay = true
+//    vmView.capturesSystemKeys = true
 
     DispatchQueue.main.async {
       onViewCreated(vmView)
